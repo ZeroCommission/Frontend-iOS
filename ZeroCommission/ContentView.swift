@@ -1,21 +1,27 @@
-//
-//  ContentView.swift
-//  ZeroCommission
-//
-//  Created by 김민정 on 10/2/24.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var userViewModel: UserViewModel // 전역 ViewModel
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {  // NavigationView 추가
+            VStack {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+                Text("Hello, world!")
+                Text("Current Role: \(userViewModel.role ?? "nologin")")
+                    .padding()
+                NavigationLink(destination: LoginView()) {  // LoginView로 이동하는 버튼 추가
+                    Text("Go to Login")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+            }
+            .padding()
         }
-        .padding()
     }
 }
 

@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		92384CD42CAEBD85000B7E67 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 92384CD32CAEBD85000B7E67 /* KakaoSDKAuth */; };
+		92384CD62CAEBD85000B7E67 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 92384CD52CAEBD85000B7E67 /* KakaoSDKCommon */; };
+		92384CD82CAEBD85000B7E67 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 92384CD72CAEBD85000B7E67 /* KakaoSDKUser */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		92EF3C522CAD668900A6FB73 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +35,22 @@
 		92EF3C5B2CAD668900A6FB73 /* ZeroCommissionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeroCommissionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		929678B02CAEB0BA002896F6 /* Exceptions for "ZeroCommission" folder in "ZeroCommission" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 92EF3C3F2CAD668700A6FB73 /* ZeroCommission */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		92EF3C422CAD668700A6FB73 /* ZeroCommission */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				929678B02CAEB0BA002896F6 /* Exceptions for "ZeroCommission" folder in "ZeroCommission" target */,
+			);
 			path = ZeroCommission;
 			sourceTree = "<group>";
 		};
@@ -52,6 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92384CD62CAEBD85000B7E67 /* KakaoSDKCommon in Frameworks */,
+				92384CD42CAEBD85000B7E67 /* KakaoSDKAuth in Frameworks */,
+				92384CD82CAEBD85000B7E67 /* KakaoSDKUser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +134,9 @@
 			);
 			name = ZeroCommission;
 			packageProductDependencies = (
+				92384CD32CAEBD85000B7E67 /* KakaoSDKAuth */,
+				92384CD52CAEBD85000B7E67 /* KakaoSDKCommon */,
+				92384CD72CAEBD85000B7E67 /* KakaoSDKUser */,
 			);
 			productName = ZeroCommission;
 			productReference = 92EF3C402CAD668700A6FB73 /* ZeroCommission.app */;
@@ -195,6 +220,9 @@
 			);
 			mainGroup = 92EF3C372CAD668700A6FB73;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				92384CD22CAEBD85000B7E67 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 92EF3C412CAD668700A6FB73 /* Products */;
 			projectDirPath = "";
@@ -396,6 +424,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZeroCommission/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -435,6 +464,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZeroCommission/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -591,6 +621,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		92384CD22CAEBD85000B7E67 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		92384CD32CAEBD85000B7E67 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92384CD22CAEBD85000B7E67 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		92384CD52CAEBD85000B7E67 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92384CD22CAEBD85000B7E67 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		92384CD72CAEBD85000B7E67 /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92384CD22CAEBD85000B7E67 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 92EF3C382CAD668700A6FB73 /* Project object */;
 }
